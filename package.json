@@ -1,0 +1,67 @@
+{
+  "name": "esbuild-plugin-html-minifier-terser",
+  "version": "1.0.0",
+  "description": "esbuild plugin to minify html files",
+  "keywords": [
+    "esbuild",
+    "plugin",
+    "html-minifier-terser",
+    "html",
+    "minifier",
+    "minify",
+    "terser"
+  ],
+  "homepage": "https://github.com/Level222/esbuild-plugin-html-minifier-terser#readme",
+  "bugs": {
+    "url": "https://github.com/Level222/esbuild-plugin-html-minifier-terser/issues"
+  },
+  "license": "MIT",
+  "author": "Level222",
+  "files": [
+    "dist/"
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Level222/esbuild-plugin-html-minifier-terser.git"
+  },
+  "scripts": {
+    "build": "npm run build:clean && tsc --project tsconfig.build.json",
+    "build:clean": "rimraf ./dist",
+    "watch": "npm run build:clean && tsc --project tsconfig.build.json --watch",
+    "prepublishOnly": "npm run test && npm run build",
+    "test": "jest",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "@stylistic/eslint-plugin": "^1.7.0",
+    "@types/html-minifier-terser": "^7.0.2",
+    "@types/jest": "^29.5.12",
+    "@types/mock-fs": "^4.13.4",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^28.2.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^52.0.0",
+    "html-minifier-terser": "^7.2.0",
+    "mock-fs": "^5.2.0",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.6.0"
+  },
+  "dependencies": {
+    "glob": "^10.3.12"
+  },
+  "peerDependencies": {
+    "esbuild": "*",
+    "html-minifier-terser": "*"
+  }
+}
